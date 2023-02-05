@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "@yarnpkg/pnpify": "^4.0.0-rc.38",
     "clsx": "^1.2.1",
     "next": "13.1.6",
     "react": "18.2.0",
@@ -25,6 +26,7 @@
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
+    "@yarnpkg/sdks": "^3.0.0-rc.38",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.30.0",
     "eslint-config-next": "13.1.6",
