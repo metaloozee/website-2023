@@ -46,24 +46,35 @@ const Home = (props: Props) => {
         <title>ayxn</title>
       </Head>
 
-      <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div className="col-span-2">
+      <div className="w-full space-y-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="col-span-1 md:col-span-2">
             <Hero />
           </div>
           <Github />
+        </div>
 
-          <div className="space-y-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="w-full grid grid-cols-2 md:grid-cols-1 gap-5">
             <Twitter />
             <Instagram />
           </div>
-          <div className="col-span-2">
+          <div className="col-span-1 md:col-span-2">
             <About />
           </div>
+        </div>
 
+        <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-5">
           <Spotify lanyard={lanyard} />
           <Discord status={status} activities={activities} />
-          <Skills />
+          <div className="col-span-2 md:col-span-1">
+            <Skills />
+          </div>
+        </div>
+
+        <div className="w-full p-10 bg-neutral-900 rounded-xl">
+          <h1 className="font-bold text-glow-neutral-500">guestbook</h1>
+          <h1 className="text-xs text-glow-neutral-100">coming soon..</h1>
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ const Github = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 					className={clsx(
-						'group relative flex h-full w-full flex-col justify-between overflow-hidden rounded-2xl text-white',
+						'group relative flex h-full w-full flex-col gap-10 justify-between overflow-hidden rounded-2xl text-white',
 					)}
 				>
 					<span aria-hidden className="pointer-events-none absolute inset-0 -z-20">

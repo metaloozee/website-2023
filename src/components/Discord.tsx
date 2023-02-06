@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-import { SiDiscord } from "react-icons/si";
+import { SiDiscord, SiVisualstudiocode } from "react-icons/si";
 
 const Discord: React.FC<{ status: string, activities: object[] }> = ({ status, activities }) => {
     return (
@@ -15,7 +15,7 @@ const Discord: React.FC<{ status: string, activities: object[] }> = ({ status, a
 					offline: 'bg-indigo-500 text-white/90 ',
                 }[status]
             )}>
-                <div className="w-full flex flex-col justify-between items-start">
+                <div className="w-full flex gap-10 flex-col justify-between items-start">
                     <SiDiscord size={30} />
 
                     <div className="flex flex-col justify-center items-start gap-2">

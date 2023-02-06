@@ -26,7 +26,7 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
                 <Link
                     suppressHydrationWarning
                     href="https://open.spotify.com/playlist/5dghrMaTeDO6YrZqpKH0hN"
-                    className={clsx('group relative flex h-full rounded-xl')}
+                    className={clsx('group relative flex h-full w-full rounded-xl')}
                 >
                     <span className="absolute inset-0 -z-10">
                         <Image
@@ -60,7 +60,7 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
                     href={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={clsx('group relative flex h-full rounded-xl overflow-hidden')}
+                    className={clsx('group relative flex h-full w-full rounded-xl overflow-hidden')}
                 >
                     <span className="absolute inset-0 -z-10">
                         <Image
@@ -73,7 +73,7 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
                         />
                     </span>
 
-                    <span suppressHydrationWarning className="flex flex-1 flex-col justify-between p-6 text-white">
+                    <span suppressHydrationWarning className="flex gap-10 flex-1 flex-col justify-between p-6 text-white">
                         <span className="flex justify-between">
                             <BsSpotify className="text-2xl" />
 							<HiOutlineExternalLink className="text-xl opacity-50 transition duration-500 group-hover:opacity-100" />

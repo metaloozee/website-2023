@@ -8,10 +8,10 @@ import { BsArrowUpRight } from "react-icons/bs";
 const Hero = () => {
     return (
         <>
-            <div className="bg-indigo-500/20 rounded-xl p-10 h-76 flex justify-center h-60">
-                <div className="w-full flex flex-row gap-10 justify-center items-center">
+            <div className="bg-indigo-500/20 rounded-xl p-10 flex justify-center h-full w-full">
+                <div className="w-full flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-center">
                     <Image className="glow-indigo-300 rounded-full" src={'/MetalOoze05.png'} width={100} height={100} alt="metalooze" />
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
                         <h1 className="font-semibold text-indigo-200 text-glow-indigo-300">ayan parkar</h1>
                         <h1 className="text-indigo-200 text-glow-indigo-300">17 year old programming enthusiast</h1>
                         <Link 
