@@ -22,7 +22,7 @@ const Discord: React.FC<{ status: string, activities: object[] }> = ({ status, a
 
                     <span className="space-y-0.5 pb-6">
                         <span className="block font-bold">{status}</span>
-                        <span className="block font-semibold text-sm">metalooze#0499</span>
+                        <span className="block font-semibold text-sm truncate">metalooze#0499</span>
                         <span className="block text-xs">
                             {activities.map((a: any) => (a.name == "Code") ? a.details : "")}
                         </span>
