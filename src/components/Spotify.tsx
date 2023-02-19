@@ -26,19 +26,19 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
                 <Link
                     suppressHydrationWarning
                     href="https://open.spotify.com/playlist/5dghrMaTeDO6YrZqpKH0hN"
-                    className={clsx('group relative flex h-full w-full rounded-xl')}
+                    className={clsx('group relative flex h-full w-full rounded-xl overflow-hidden')}
                 >
                     <span className="absolute inset-0 -z-10">
                         <Image
-                            src={'https://i.scdn.co/image/ab67706c0000da84e581815a92946c295b02b936'}
-                            className="bg-black brightness-50 rounded-xl"
+                            src={'https://i.scdn.co/image/ab67706c0000da8496f064f0a8324108d4f9b82c'}
+                            className="rounded-xl bg-black brightness-50 transition-all duration-500 will-change-[transform,_filter] group-hover:scale-[1.15] group-hover:brightness-[0.4] group-hover:saturate-0"
                             fill
                             alt="Album cover"
                             style={{ objectFit: 'cover' }}
                         />
                     </span>
 
-                    <span className="flex flex-1 flex-col justify-between p-10 text-white">
+                    <span className="flex flex-1 flex-col gap-10 justify-between p-6 text-white">
                         <span className="flex justify-between">
                             <BsSpotify className="text-2xl" />
                             <HiOutlineExternalLink className="text-xl opacity-50 transition duration-500 group-hover:opacity-100" />
@@ -46,7 +46,7 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
 
                         <div className="space-y-0.5">
                             <h1 className="text-semibold">
-                                playlist: shit
+                                feeling shitty
                             </h1>
 
                             <p className="text-xs">because you had to get a 3 hour bus journey in the early hours</p>
