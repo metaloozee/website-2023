@@ -15,6 +15,7 @@ const Hero = () => {
                         <h1 className="font-semibold text-indigo-200 text-glow-indigo-300">ayan parkar</h1>
                         <h1 className="text-indigo-200 text-glow-indigo-300">17 year old programming enthusiast</h1>
                         <Link 
+                            suppressHydrationWarning
                             href={'https://ayanprkr.vercel.app/'} 
                             target="_blank" 
                             rel="noopener noreferrer" 

@@ -1,5 +1,5 @@
 import React from "react";
-import { LanyardResponse, Data } from "use-lanyard";
+import { type Data } from "use-lanyard";
 import clsx from "clsx";
 
 import Link from "next/link";
@@ -55,9 +55,9 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
                 </Link>
             ) : (
                 <Link
-                    key={lanyard.spotify.track_id}
                     suppressHydrationWarning
-                    href={`https://open.spotify.com/track/${lanyard.spotify.track_id}`}
+                    key={lanyard.spotify.track_id}
+                    href={`https://open.spotify.com/track/${lanyard.spotify.track_id ?? ""}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={clsx('group relative flex h-full w-full rounded-xl overflow-hidden')}
@@ -73,7 +73,7 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
                         />
                     </span>
 
-                    <span suppressHydrationWarning className="flex gap-10 flex-1 flex-col justify-between p-6 text-white">
+                    <span className="flex gap-10 flex-1 flex-col justify-between p-6 text-white">
                         <span className="flex justify-between">
                             <BsSpotify className="text-2xl" />
 							<HiOutlineExternalLink className="text-xl opacity-50 transition duration-500 group-hover:opacity-100" />

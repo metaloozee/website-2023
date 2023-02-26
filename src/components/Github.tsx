@@ -13,6 +13,7 @@ const Github = () => {
     return (
         <>
             <Link
+					suppressHydrationWarning
 					href="https://github.com/metalooze05"
 					target="_blank"
 					rel="noopener noreferrer"

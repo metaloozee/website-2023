@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import React from "react";
 import clsx from "clsx";
 
-import { SiDiscord, SiVisualstudiocode } from "react-icons/si";
+import { SiDiscord } from "react-icons/si";
 
 const Discord: React.FC<{ status: string, activities: object[] }> = ({ status, activities }) => {
     return (
@@ -14,16 +16,17 @@ const Discord: React.FC<{ status: string, activities: object[] }> = ({ status, a
                     dnd: 'bg-red-500 text-red-50 ',
 					offline: 'bg-indigo-500 text-white/90 ',
                 }[status]
-            )}>
+            )}
+            >
                 <span className="h-full flex flex-col justify-between px-6 pt-6">
                     <span className="flex justify-between">
                         <SiDiscord className="text-3xl" />
                     </span>
 
                     <span className="space-y-0.5 pb-6">
-                        <span className="block font-bold">{status}</span>
+                        <span suppressHydrationWarning className="block font-bold">{status}</span>
                         <span className="block font-semibold text-sm truncate">metalooze#0499</span>
-                        <span className="block text-xs">
+                        <span suppressHydrationWarning className="block text-xs">
                             {activities.map((a: any) => (a.name == "Code") ? a.details : "")}
                         </span>
                     </span>

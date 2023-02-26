@@ -1,5 +1,9 @@
-import { DependencyList, useEffect } from "react";
-import { Data, Snowflake, useLanyard } from "use-lanyard";
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/unbound-method */
+
+import { type DependencyList, useEffect } from "react";
+import { type Data, type Snowflake, useLanyard } from "use-lanyard";
 
 const useInterval = (ms: number, options: { callback: () => void; deps: DependencyList }) => {
     useEffect(() => {
@@ -8,7 +12,7 @@ const useInterval = (ms: number, options: { callback: () => void; deps: Dependen
         return () => {
             clearInterval(id);
         };
-    }, [ms, ...options.deps])
+    }, [ms, options.callback])
 }
 
 export const useUpdatingLanyard = (id: Snowflake, initialData: Data) => {

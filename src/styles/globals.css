@@ -9,7 +9,7 @@
 }
 
 *::selection {
-    @apply text-black bg-purple-400
+    @apply text-black bg-blue-400
 }
 
 body {

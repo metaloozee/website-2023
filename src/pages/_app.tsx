@@ -1,15 +1,24 @@
-import { type AppType } from "next/dist/shared/lib/utils";
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { type AppType } from "next/app";
+import { type Session } from "next-auth";
+import { SessionProvider } from "next-auth/react";
 
-import "../styles/globals.css";
+import { api } from "~/utils/api";
 
-import Layout from "../components/Layout";
+import "~/styles/globals.css";
+import Layout from "~/components/Layout";
 
-const MyApp: AppType = ({ Component, pageProps }) => {
+const MyApp: AppType<{ session: Session | null }> = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}) => {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  )
+    <SessionProvider session={session}>
+       <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </SessionProvider>
+  );
 };
 
-export default MyApp;
+export default api.withTRPC(MyApp);

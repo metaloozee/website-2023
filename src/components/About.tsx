@@ -1,10 +1,5 @@
 import React from "react";
 
-import Image from "next/image";
-import Link from "next/link";
-
-import { BsArrowUpRight } from "react-icons/bs";
-
 const About = () => {
     return (
         <>

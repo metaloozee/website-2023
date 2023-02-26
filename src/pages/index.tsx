@@ -9,7 +9,9 @@ import About from "../components/About";
 import Spotify from "../components/Spotify";
 import Skills from "../components/Skills";
 import Discord from "../components/Discord";
+import Guestbook from "~/components/Guestbook";
 
+import { useSession } from "next-auth/react";
 import { useUpdatingLanyard } from "../hooks/lanyard";
 import type { Data, LanyardResponse } from "use-lanyard";
 
@@ -39,6 +41,8 @@ const Home = (props: Props) => {
 
   const status = lanyard.discord_status ?? "offline";
   const activities = lanyard.activities ?? "";
+
+  const { data: session } = useSession();
 
   return (
     <>
@@ -72,9 +76,12 @@ const Home = (props: Props) => {
           </div>
         </div>
 
-        <div className="w-full p-10 bg-neutral-900 rounded-xl">
-          <h1 className="font-bold text-glow-neutral-500">guestbook</h1>
-          <h1 className="text-xs text-glow-neutral-100">coming soon..</h1>
+        <div className="w-full p-10 bg-neutral-900 rounded-xl flex flex-col gap-10">
+          <div>
+            <h1 className="font-bold text-glow-neutral-500">guestbook</h1>
+            <h1 className="text-xs text-glow-neutral-100">Leave a comment below to be on my guestbook forever! It could be literally anything, a joke, a quote or even a cool fact.</h1>
+          </div>
+          <Guestbook session={session} />
         </div>
       </div>
     </>
