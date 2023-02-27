@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import { type GetServerSidePropsContext } from "next";
 import {
   getServerSession,
@@ -44,6 +47,23 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
+    async signIn({ user, profile }: any) {
+      try {
+        await prisma.user.update({
+          where: {
+            email: user.email as string
+          }, 
+          data: {
+            image: profile?.image_url,
+            name: profile?.username
+          },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      return true;
+    }
   },
   adapter: PrismaAdapter(prisma),
   providers: [

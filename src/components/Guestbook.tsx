@@ -94,7 +94,6 @@ const Form: React.FC<{ session: Session | null }> = ({ session }) => {
 
         gb.mutate({
             email: session?.user?.email as string,
-            name: session?.user.name as string,
             message,
         })
 
@@ -163,7 +162,7 @@ const Guestbook: React.FC<{ session: Session | null }> = ({ session }) => {
                                 id={msg.id}
                                 session={session}
                                 email={msg.email}
-                                name={msg.name ?? "undefined"}
+                                name={msg.user.name ?? "undefined"}
                                 message={msg.message}
                                 createdAt={msg.createdAt?.toString().slice(0, 16) ?? "undefined"}
                             />

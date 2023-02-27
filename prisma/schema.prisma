@@ -71,7 +71,7 @@ model VerificationToken {
 model Guestbook {
     id        String   @id @default(cuid())
     email     String   @db.VarChar(256)
-    name      String   @db.VarChar(256)
+    name      String?  @db.VarChar(256)
     message   String   @db.VarChar(500)
     createdAt DateTime @default(now())
     hidden    Boolean  @default(false)

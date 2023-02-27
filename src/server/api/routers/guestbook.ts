@@ -16,10 +16,10 @@ export const guestbookRouter = createTRPCRouter({
                     select: {
                         id: true,
                         email: true,
-                        name: true,
                         hidden: true,
                         message: true,
-                        createdAt: true
+                        createdAt: true,
+                        user: true
                     },
                     orderBy: {
                         createdAt: "desc"
@@ -33,7 +33,6 @@ export const guestbookRouter = createTRPCRouter({
     postMessage: protectedProcedure
         .input(z.object({
             email: z.string(),
-            name: z.string(),
             message: z.string(),
         }))
         .mutation(async ({ ctx, input }) => {
@@ -41,7 +40,6 @@ export const guestbookRouter = createTRPCRouter({
                 await ctx.prisma.guestbook.create({
                     data: {
                         email: input.email,
-                        name: input.name,
                         message: input.message,
                         createdAt: new Date(Date.now()),
                     }
