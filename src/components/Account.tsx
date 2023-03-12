@@ -11,7 +11,7 @@ const Account: React.FC<{ session: Session | null }> = ({ session }) => {
     if (!session) {
         return (
             <>
-                <div className='w-full rounded-xl flex justify-between items-center'>
+                <div className='w-full rounded-xl flex flex-col gap-5 md:flex-row md:justify-between md:items-center'>
                     <h1 className='text-xs'>please sign in with discord to leave a comment blow.</h1>
                     <button
                         onClick={() => signIn("discord")}

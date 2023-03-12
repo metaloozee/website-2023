@@ -26,6 +26,8 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
                 <Link
                     suppressHydrationWarning
                     href="https://open.spotify.com/playlist/5dghrMaTeDO6YrZqpKH0hN"
+                    target="_blank"
+					rel="noopener noreferrer"
                     className={clsx('group relative flex h-full w-full rounded-xl overflow-hidden')}
                 >
                     <span className="absolute inset-0 -z-10">
