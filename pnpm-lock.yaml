@@ -16,6 +16,7 @@ specifiers:
   '@types/react-dom': ^18.0.10
   '@typescript-eslint/eslint-plugin': ^5.47.1
   '@typescript-eslint/parser': ^5.47.1
+  '@vercel/analytics': ^1.0.0
   '@yarnpkg/pnpify': ^4.0.0-rc.38
   '@yarnpkg/sdks': ^3.0.0-rc.38
   autoprefixer: ^10.4.7
@@ -46,6 +47,7 @@ dependencies:
   '@trpc/next': 10.12.0_twxsmod72jqp5mq5sjgf4pkz2u
   '@trpc/react-query': 10.12.0_tij422wpfxfl3iixjhzsgwgs2e
   '@trpc/server': 10.12.0
+  '@vercel/analytics': 1.0.0_react@18.2.0
   '@yarnpkg/pnpify': 4.0.0-rc.39
   clsx: 1.2.1
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
@@ -626,6 +628,14 @@ packages:
       '@typescript-eslint/types': 5.53.0
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@vercel/analytics/1.0.0_react@18.2.0:
+    resolution: {integrity: sha512-RQmj7pv82JwGDHrnKeRc6TtSw2U7rWNubc2IH0ernTzWTj02yr9zvIYiYJeztsBzrJtWv7m8Nz6vxxb+cdEtJw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@yarnpkg/core/4.0.0-rc.39:
     resolution: {integrity: sha512-OgPR4btSH1nsCA+cXUVIwCGMbqjcSDEb25iOlcMnqTFn0is1ydX46gp3MktLGkyN3udjEsBK7MLi/oYd/SFLPw==}
