@@ -9,7 +9,7 @@ const Twitter = () => {
         <>
             <Link
                 suppressHydrationWarning
-                href="https://instagram.com/ayanprkr"
+                href="https://twitter.com/metaloozee"
                 target="_blank"
 				rel="noopener noreferrer"
                 className="bg-sky-500 rounded-xl p-8 flex justify-start group"

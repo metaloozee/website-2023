@@ -14,7 +14,7 @@ const Github = () => {
         <>
             <Link
 					suppressHydrationWarning
-					href="https://github.com/metalooze05"
+					href="https://github.com/metaloozee"
 					target="_blank"
 					rel="noopener noreferrer"
 					className={clsx(
