@@ -25,14 +25,14 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
             {!lanyard.spotify || !lanyard.spotify.album_art_url ? (
                 <Link
                     suppressHydrationWarning
-                    href="https://open.spotify.com/playlist/5dghrMaTeDO6YrZqpKH0hN"
+                    href="https://open.spotify.com/playlist/2xAsZQa9SkQ6VUppGkZeE7"
                     target="_blank"
 					rel="noopener noreferrer"
                     className={clsx('group relative flex h-full w-full rounded-xl overflow-hidden')}
                 >
                     <span className="absolute inset-0 -z-10">
                         <Image
-                            src={'https://i.scdn.co/image/ab67706c0000da8496f064f0a8324108d4f9b82c'}
+                            src={'https://i.scdn.co/image/ab67706c0000da84c32d9694aeb649c3ff574051'}
                             className="rounded-xl bg-black brightness-50 transition-all duration-500 will-change-[transform,_filter] group-hover:scale-[1.15] group-hover:brightness-[0.4] group-hover:saturate-0"
                             fill
                             alt="Album cover"
@@ -48,10 +48,11 @@ const Spotify: React.FC<{ lanyard: Data }> = ({ lanyard }) => {
 
                         <div className="space-y-0.5">
                             <h1 className="text-semibold">
-                                feeling shitty
+                                not so good vibes
                             </h1>
 
-                            <p className="text-xs">because you had to get a 3 hour bus journey in the early hours</p>
+                            {/* <p className="text-xs">because you had to get a 3 hour bus journey in the early hours</p> */}
+                            <p className="text-xs">my mixed feelings</p>
                         </div>
                     </span>
                 </Link>
