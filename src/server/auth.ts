@@ -51,11 +51,11 @@ export const authOptions: NextAuthOptions = {
       try {
         await prisma.user.update({
           where: {
-            email: user.email as string
-          }, 
+            email: user.email as string,
+          },
           data: {
             image: profile?.image_url,
-            name: profile?.username
+            name: profile?.username,
           },
         });
       } catch (e) {
@@ -63,7 +63,7 @@ export const authOptions: NextAuthOptions = {
       }
 
       return true;
-    }
+    },
   },
   adapter: PrismaAdapter(prisma),
   providers: [
