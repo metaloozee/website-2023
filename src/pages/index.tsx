@@ -50,7 +50,7 @@ const Home = (props: Props) => {
   return (
     <>
       <Head>
-        <title>ayxn</title>
+        <title>ayan</title>
       </Head>
 
       <div className="w-full space-y-5">

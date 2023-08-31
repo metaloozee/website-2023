@@ -9,7 +9,7 @@ const Instagram = () => {
     <>
       <Link
         suppressHydrationWarning
-        href="https://instagram.com/ayanprkr"
+        href="https://instagram.com/ayannparkar"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex justify-end rounded-xl bg-fuchsia-500 p-8"

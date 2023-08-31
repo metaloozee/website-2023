@@ -1,9 +1,6 @@
 import React from "react";
 
 import Image from "next/image";
-import Link from "next/link";
-
-import { BsArrowUpRight } from "react-icons/bs";
 
 const Hero = () => {
   return (
@@ -22,18 +19,8 @@ const Hero = () => {
               ayan
             </h1>
             <h1 className="text-indigo-200 text-glow-indigo-300">
-              17 year old programming enthusiast
+              17 year old programming enthusiast 🪄
             </h1>
-            <Link
-              suppressHydrationWarning
-              href={"https://ayanprkr.vercel.app/"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-row items-center gap-2 text-xs text-indigo-200 underline text-glow-indigo-300"
-            >
-              old website
-              <BsArrowUpRight fill="#c7d2fe" size={12} />
-            </Link>
           </div>
         </div>
       </div>
